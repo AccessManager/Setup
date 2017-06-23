@@ -1,0 +1,22 @@
+{
+  "name": "access-manager/setup",
+  "description": "A sub-module for Access Manager",
+  "keywords": ["wifi", "hotspot", "mikrotik"],
+  "license": "MIT",
+  "homepage": "http://accessmanager.in",
+  "require": {
+    "php": ">=5.6.4",
+    "access-manager/base": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "AM3\\Setup\\": "src"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
