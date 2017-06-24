@@ -10,7 +10,7 @@
   },
   "autoload": {
     "psr-4": {
-      "AM3\\Setup\\": "src"
+      "AccessManager\\Setup\\": "src"
     }
   },
   "config": {
