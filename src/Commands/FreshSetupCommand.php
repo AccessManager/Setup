@@ -35,7 +35,7 @@ class FreshSetupCommand extends Command
         $this->call("config:db");
 
         //run migrations
-        $this->call('migrate:fresh');
+        $this->call('migrate:refresh');
 
         //generate encryption key
         $this->call('key:generate');
