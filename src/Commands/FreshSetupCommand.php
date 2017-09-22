@@ -34,6 +34,12 @@ class FreshSetupCommand extends Command
         //update database configuration
         $this->call("config:db");
 
+        //run migrations
+        $this->call('migrate:fresh');
+
+        //generate encryption key
+        $this->call('key:generate');
+
         //create default admin account.
         $this->addAdminAccount();
     }
