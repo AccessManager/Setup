@@ -42,6 +42,8 @@ class FreshSetupCommand extends Command
 
         //create default admin account.
         $this->addAdminAccount();
+
+        $this->info("Access Manager installed successfully.");
     }
 
     /**
@@ -50,7 +52,6 @@ class FreshSetupCommand extends Command
     protected function addAdminAccount()
     {
         //disconnect existing DB connection to reconnect with new updated config variables.
-        DB::purge('mysql');
 
         $this->line("Deleting any existing admin accounts.");
         //empty users table.
