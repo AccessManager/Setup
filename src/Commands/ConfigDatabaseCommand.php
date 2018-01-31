@@ -41,7 +41,10 @@ class ConfigDatabaseCommand extends Command
             ->setDbUsername($dbUser)
             ->setDbPassword($dbPass)
             ->save();
+
+        //disconnect from DB, so that we can connect with updated credentials.
         DB::purge('mysql');
+
         $this->info("Configuration Successfully Updated.");
     }
 
